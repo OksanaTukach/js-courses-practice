@@ -1,0 +1,69 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+.content {
+    background-color: rgb(215, 233, 227);
+    width: 50%;
+    height: 400px;
+    position: relative;
+    top: 5em;
+    text-align: center;
+}
+.text {
+    color: rgb(4, 46, 46);
+    position: relative;
+    top: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+.popup-btn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 6em;
+}
+.popup-cnt {
+    border: 1px solid black;
+    height: 200px;
+    width: 25%;
+    position: relative;
+    left: 10em;
+    top: -15em;
+    background-color: rgb(255, 255, 255);
+}
+.text-popup {
+    font-size: 2em;
+    text-align: center;
+}
+.close-button {
+    text-align: right;
+}
+.close-btn {
+    background-color: #3498DB;
+    cursor: pointer;
+    font-size: 20px;
+}
+.text-popup2 {
+    color: rgb(24, 23, 23);
+    font-size: 1.5em;
+}
+.input-popup {
+    position: relative;
+    top: -1.5em;
+    width: 100px;
+}
+.save-button {
+    margin-left: 12em;
+    margin-top: -2.8em;
+    cursor: pointer;
+}

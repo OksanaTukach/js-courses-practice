@@ -1,0 +1,42 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.tabset {
+    position: relative;
+    top: 40px;
+}
+.content-tab {
+    position: relative;
+    top: 20px;
+    height: 100px;
+    width: 300px;
+    background-color: rgb(231, 222, 222);
+    text-align: center;
+}
+button:hover {
+    color: rgb(60, 49, 211);
+}
+button {
+    display: inline-block;
+    padding: 0.4em 1em;
+    color: rgb(30, 27, 48);
+    border: 2px;
+    border-radius: 0.2em;
+    font-size: 1rem;
+}
+.text-tab {
+    position: relative;
+    top: 30px;
+    color: rgb(39, 38, 38);
+    font-size: 1.5em;
+}

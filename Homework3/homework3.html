@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabset</title>
+    <link rel="stylesheet" type="text/css" href="tabset.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" type="text/css" href="dropdown.css">
+    <link rel="stylesheet" type="text/css" href="slider2.css">
+</head>
+<body>
+     
+     <!-- Slider -->
+     <div class="slider">
+            <div class="photo">
+                <img src="1_1.jpg" alt="Первый слайд">
+            </div>
+        
+            <div class="photo">
+                <img src="1_2.jpeg" alt="Второй слайд">
+            </div>
+        
+            <div class="photo">
+                <img src="2_3.jpg" alt="Третий слайд">
+            </div>
+        
+            <a class="back" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+        
+        <div class="slider-dots">
+            <span class="slider-dots-circle" onclick="currentSlide(1)"></span> 
+            <span class="slider-dots-circle" onclick="currentSlide(2)"></span> 
+            <span class="slider-dots-circle" onclick="currentSlide(3)"></span> 
+        </div>
+       <!-- dropdown -->
+     <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Toggle dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Action-1</a>
+              <a href="#">Another action</a>
+              <a href="#">Something else is here </a>
+            </div>
+    <!-- Tabset -->
+    <div class="tabset">
+        <div class="button">
+            <button class="simple" type="button">
+                Simple
+            </button>
+            <button class="fancy" type="button">
+                Fancy title
+            </button>
+            <button class="disabled" type="button">
+                Disabled
+            </button>
+        </div>
+        <div class="content-tab">
+            <div class="content-simple">
+            <div class="text-tab">Content simple</div>
+            </div>
+            <div class="content-fancy">
+            <div class="text-tab">Content fancy</div>
+            </div>
+            <div class="content-disabled">
+            <div class="text-tab">Content disabled</div>
+            </div>
+        </div>
+    </div>
+     
+          </div>
+    <!-- Popup -->
+    <div class="popup">
+            <div class="content">
+                <h3 class="text"> Modal with default options</h3>
+                <button class="popup-btn" type="button">Launch demo modal</button>
+            </div>
+                <div class="popup-cnt">
+                    <div class="close-button"><button class="close-btn" type="button">X</button> </div>
+                    <div class="text-popup">Profile update</div>
+                    <p class="text-popup2">Date of birth</p>
+                    <div class="input-popup"> <input type="text" placeholder="yyyy-mm-dd"> </div>
+                    <div class="save-button"> <button class="save-btn" type="button">Save</button> </div>
+            </div>
+        </div>
+       
+             
+    <script src="tabset.js"></script>
+    <script src="popup.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="slider2.js"></script>
+</body>
+</html>
