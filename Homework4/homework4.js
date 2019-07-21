@@ -2,13 +2,13 @@
 var btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function(event){
-    doRequest({})
+    doRequest({email: 'okstukach@gmail.com'})
 });
 
 function doRequest(data) {
     fetch('https://intern-staging.herokuapp.com/api/identification', {
-        method: 'GET',
-        // body: JSON.stringify(data),
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
         },
