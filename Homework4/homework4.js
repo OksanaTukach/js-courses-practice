@@ -1,3 +1,4 @@
+'use strict'
 var btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function(event){
@@ -10,9 +11,9 @@ function doRequest(data) {
         headers: {
             'Content-type': 'application/json',
         },
-    }).then(
+    }) .then(
         resp => resp.json()
-    ).then(
+    ) .then(
         json => console.log(json)
     );
 }
