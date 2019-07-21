@@ -2,11 +2,13 @@
 var btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function(event){
-    doRequest({email: 'oshabovta@mail.ru'})
+    var newUser = {email: 'oshabovta@mail.ru'};
+    var activeUser = {id: '5d34e775d4279300044487e5' };
+    doRequest(activeUser)
 });
 
 function doRequest(data) {
-    fetch('https://intern-staging.herokuapp.com/api/identification', {
+    fetch('https://intern-staging.herokuapp.com/api/identification/activate', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
