@@ -1,8 +1,10 @@
 'use strict'
 var btn = document.querySelector('#btn');
 
-btn.addEventListener('click', function(event){
-    doRequest({email: 'okstukach@gmail.com'})
+btn.addEventListener('click', function(event) {
+    var newUser = {email: 'okstukach@gmail.com'};
+    var activeUser = { id: '5d34ee13d4279300044487e7'};
+    doRequest(activeUser)
 });
 
 function doRequest(data) {
