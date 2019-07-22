@@ -12,7 +12,7 @@ btn.addEventListener('click', function(event) {
 function doRequest(data, token) {
     fetch('https://intern-staging.herokuapp.com/api/comment', {
         method: 'GET',
-        body: JSON.stringify(data),
+        //body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
             'token': token
