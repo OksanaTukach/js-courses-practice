@@ -8,7 +8,7 @@ function doRequest(url, method, data, headers) {
         body: data,
         headers: headers ,
         },
-    }) .then(
+    ) .then(
         resp => resp.json()
     ) .then(
         json => console.log(json)
