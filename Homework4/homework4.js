@@ -15,6 +15,7 @@ function doRequest(data, token) {
         body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
+            'token': token
         },
     }) .then(
         resp => resp.json()
