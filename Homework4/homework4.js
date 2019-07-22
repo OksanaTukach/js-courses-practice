@@ -22,7 +22,7 @@ form.addEventListener('submit', function (ev) {
    
     formD.append('parentEntityId', '5d34ee13d4279300044487e7');
 
-    doRequest('/file', 'POST', formD, tokenStr);
+    doRequest('/file', 'POST', formD, {'token': tokenStr});
     ev.preventDefault();
 })
     
