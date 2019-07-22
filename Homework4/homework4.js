@@ -10,7 +10,7 @@ btn.addEventListener('click', function(event) {
 
 function doRequest(data) {
     fetch('https://intern-staging.herokuapp.com/api/identification/sign_in', {
-        method: 'GET',
+        method: 'POST',
         body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
