@@ -5,13 +5,13 @@ btn.addEventListener('click', function(event) {
     //var newUser = {email: 'okstukach@gmail.com'};
     //var activeUser = { id: '5d34ee13d4279300044487e7'};
     //var signInReq = {email: 'okstukach@gmail.com' , password: 'sw8rMg'};
-    doRequest({});
+    doRequest({email: 'okstukach@gmail.com' , password: 'sw8rMg'});
 });
 
 function doRequest(data) {
-    fetch('https://intern-staging.herokuapp.com/api/identification', {
+    fetch('https://intern-staging.herokuapp.com/api/identification/sign_in', {
         method: 'GET',
-        //body: JSON.stringify(data),
+        body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
         },
