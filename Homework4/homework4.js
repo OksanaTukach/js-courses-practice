@@ -2,10 +2,10 @@
 var btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function(event) {
-    //var newUser = {email: 'okstukach@gmail.com'};
-    //var activeUser = { id: '5d34ee13d4279300044487e7'};
-    //var signInReq = {email: 'okstukach@gmail.com' , password: 'sw8rMg'};
-    doRequest({email: 'okstukach@gmail.com' , password: 'sw8rMg'});
+    var newUser = {email: 'okstukach@gmail.com'};
+    var activeUser = { id: '5d34ee13d4279300044487e7'};
+    var signInReq = {email: 'okstukach@gmail.com' , password: 'Hl2k94'};
+    doRequest(signInReq);
 });
 
 function doRequest(data) {
