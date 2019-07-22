@@ -6,7 +6,7 @@ btn.addEventListener('click', function(event) {
     doRequest({});
 });
 
-function doRequest(data, token) {
+function doRequest(data) {
     fetch('https://intern-staging.herokuapp.com/api/identification', {
         method: 'GET',
         //body: JSON.stringify(data),
