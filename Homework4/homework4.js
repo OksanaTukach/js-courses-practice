@@ -10,7 +10,7 @@ function doRequest(url, method, data, headers) {
     
     }) .then(
         resp => resp.json()
-    ) .then(
+    ); .then(
         json => console.log(json)
     );
 }
