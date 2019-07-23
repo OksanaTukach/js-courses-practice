@@ -7,12 +7,13 @@ function doRequest(url, method, data, headers) {
         method: method,
         body: data,
         headers: headers ,
-        },
-    )} .then(
+    
+    }) .then(
         resp => resp.json()
     ) .then(
         json => console.log(json)
     );
+}
 doRequest('/identification', 'GET', null)
   
 var form = document.forms.namedItem('fileinfo');
