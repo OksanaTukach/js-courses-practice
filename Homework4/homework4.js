@@ -7,13 +7,13 @@ btn.addEventListener('click', function(event) {
     //var tokenStr = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzRlZTEzZDQyNzkzMDAwNDQ0ODdlNyIsImlhdCI6MTU2MzgxNDMyNSwiZXhwIjoxNTYzODE3OTI1fQ.xxbQhOoFgciKKCDe3dcEXvUHqmQ_SJwbuUs511mEoz0';
     var signInReq = {email: 'okstukach@gmail.com' , password: '6s1Ms6'};
     //var comment = {message: "Hello it", parentId: "test-234"};
-    doRequest({});
+    doRequest(signInReq);
 });
 
 function doRequest(data) {
-    fetch('https://intern-staging.herokuapp.com/api/identification', {
-        method: 'GET',
-        //body: JSON.stringify(data),
+    fetch('https://intern-staging.herokuapp.com/api/identification/sign_in', {
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json',
         },
