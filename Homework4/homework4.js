@@ -1,25 +1,26 @@
 
-var btn = document.querySelector('#btn');
+var tokenStr = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzRlZTEzZDQyNzkzMDAwNDQ0ODdlNyIsImlhdCI6MTU2Mzg5MjA1MywiZXhwIjoxNTYzODk1NjUzfQ.jE8WBcUvvl68HvExJG1BdANqUlY-WvoFc7-UmqUCqGQ';
+var API = 'https://intern-staging.herokuapp.com/api';
 
-btn.addEventListener('click', function(event) {
-    var newUser = {email: 'okstukach@gmail.com'};
-    var activeUser = { id: '5d34ee13d4279300044487e7'};
-    //var tokenStr = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzRlZTEzZDQyNzkzMDAwNDQ0ODdlNyIsImlhdCI6MTU2MzgxNDMyNSwiZXhwIjoxNTYzODE3OTI1fQ.xxbQhOoFgciKKCDe3dcEXvUHqmQ_SJwbuUs511mEoz0';
-    var signInReq = {email: 'okstukach@gmail.com' , password: '6s1Ms6'};
-    //var comment = {message: "Hello it", parentId: "test-234"};
-    doRequest(signInReq);
-});
-
-function doRequest(data) {
-    fetch('https://intern-staging.herokuapp.com/api/identification/sign_in', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-type': 'application/json',
+function doRequest(url, method, data, headers) {
+    fetch('${API}${url}', {
+        method: method,
+        body: data,
+        headers: headers ,
         },
-    }) .then(
+    )} .then(
         resp => resp.json()
     ) .then(
         json => console.log(json)
     );
-}
+doRequest('/identification', 'GET', null)
+  
+var form = document.forms.namedItem('fileinfo');
+form.addEventListener('submit', function (ev) {
+    var formD = new FormData(this);
+   
+    formD.append('parentEntityId', '5d34ee13d4279300044487e7');
+
+    doRequest('/file', 'POST', formD, {'token': tokenstr});
+    ev.preventDefault();
+})
